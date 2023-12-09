@@ -1,18 +1,16 @@
-import Cadastro from './componentes/cadastro';
-import Consulta from './componentes/consulta';
-import Lista from './componentes/lista';
-import Pai from './componentes/pai';
-import VerIdade from './componentes/verIdade';
-
+import './App.css';
+import { Link, Outlet } from 'react-router-dom'
 function App() {
   return (
-    <div className="container">
-       { /*<Cadastro />  
-        <Lista />
-        <VerIdade /> 
-        <Pai />  
-        */  } 
-        <Consulta />
+    <div className="App">
+       <nav>
+          <Link to='/contato/cadastrar'>Cadastro</Link>&nbsp;
+          <Link to='/contato/consultar'>Consulta</Link>&nbsp;
+          <Link to='/contato/detalhes/50'>detalhes</Link>
+       </nav>
+       <main>
+          <Outlet />
+       </main>
     </div>
   );
 }
